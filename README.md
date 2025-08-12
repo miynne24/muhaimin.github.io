@@ -1,7 +1,7 @@
 # Data Scientist
 
 ### Education 
-Computer Science (Hons.) at Universiti Teknologi MARA
+Degree in Computer Science (Hons.) at Universiti Teknologi MARA
 
 ### Work Experience
 1. Data Science Intern at Permodalan Nasional Berhad
