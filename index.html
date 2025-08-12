@@ -1,0 +1,278 @@
+<!doctype html>
+<!--
+  Data Scientist Portfolio - index.html
+  - Modern, responsive, single-file portfolio for GitHub Pages
+  - How to use: place this file at the repository root as `index.html` and add an `assets/` folder
+    with `profile.jpg` and `resume.pdf`. Then push to the repo and enable GitHub Pages.
+  - Customize: search for "REPLACE_ME" comments to swap your name, bio, links, and project details.
+-->
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Muhaimin Azam — Data Scientist</title>
+  <meta name="description" content="Portfolio of Muhaimin Azam — Data Scientist. Machine Learning, Time Series, NLP, Data Viz." />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-p8a4m5qJkK7oYdH7q2b5q0b7G9m0+eg2n2i1c3iJ7uM6o2qz1e1q3q3s4e5r6t7u8v9w0x1y2z3a4b5c6d7==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    :root{
+      --bg:#0f1724; /* deep navy */
+      --card:#0b1220;
+      --muted:#9aa4b2;
+      --accent:#6ee7b7; /* mint */
+      --glass: rgba(255,255,255,0.04);
+      --glass-2: rgba(255,255,255,0.02);
+      --radius: 14px;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,#071029 0%, #071a2a 60%);color:#e6eef6}
+    a{color:var(--accent);text-decoration:none}
+    header{display:flex;align-items:center;justify-content:space-between;padding:22px 28px;backdrop-filter: blur(6px);}
+    .container{max-width:1100px;margin:0 auto;padding:28px}
+
+    /* Header nav */
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand img{width:44px;height:44px;border-radius:10px;object-fit:cover}
+    nav{display:flex;gap:18px;align-items:center}
+    .btn{background:linear-gradient(90deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));padding:9px 14px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);font-weight:600}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:center;padding:40px 0}
+    .intro h1{margin:0;font-size:38px;letter-spacing:-0.4px}
+    .intro p{color:var(--muted);line-height:1.6}
+    .cta{display:flex;gap:12px;margin-top:18px}
+    .socials{display:flex;gap:10px;margin-top:18px}
+    .stat-grid{display:flex;gap:12px;margin-top:22px}
+    .stat{background:var(--glass);padding:12px;border-radius:12px;min-width:120px;text-align:center}
+    .stat h3{margin:0}
+    .profile-card{background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));padding:18px;border-radius:16px;border:1px solid rgba(255,255,255,0.03)}
+    .profile-card img{width:100%;border-radius:12px;object-fit:cover}
+
+    /* Projects */
+    section{margin-top:36px}
+    .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+    .card{background:var(--card);padding:18px;border-radius:14px;border:1px solid rgba(255,255,255,0.03)}
+    .card h4{margin:8px 0}
+    .badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+    .badge{background:var(--glass-2);padding:6px 10px;border-radius:999px;font-size:13px;color:var(--muted)}
+
+    /* Skills */
+    .skills{display:flex;flex-wrap:wrap;gap:10px}
+    .skill-pill{background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:8px 12px;border-radius:999px;font-weight:600;color:var(--muted)}
+
+    /* Experience timeline */
+    .timeline{display:flex;flex-direction:column;gap:12px}
+    .timeline-item{display:flex;gap:12px;align-items:flex-start}
+    .dot{width:10px;height:10px;border-radius:50%;background:var(--accent);margin-top:6px}
+
+    /* Contact */
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+
+    footer{margin-top:46px;padding:28px 0;text-align:center;color:var(--muted);font-size:14px}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr;}
+      nav{display:none}
+      header{padding:18px}
+    }
+
+    /* subtle hover */
+    .card:hover{transform:translateY(-6px);transition:0.25s ease}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;padding:0">
+      <div class="brand">
+        <div style="width:46px;height:46px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#8ad7ff);display:flex;align-items:center;justify-content:center;font-weight:800;color:#04202d">MA</div>
+        <div>
+          <div style="font-weight:700">Muhaimin Azam</div>
+          <div style="font-size:12px;color:var(--muted)">Data Scientist</div>
+        </div>
+      </div>
+
+      <nav>
+        <a class="btn" href="#projects">Projects</a>
+        <a class="btn" href="#skills">Skills</a>
+        <a class="btn" href="#contact">Contact</a>
+        <a class="btn" href="assets/resume.pdf" target="_blank" rel="noopener">Download CV</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="intro">
+        <h1>Hi — I'm <span style="color:var(--accent)">Muhaimin</span></h1>
+        <p>I build reliable machine learning systems and clear data visualizations. My work focuses on time-series forecasting, NLP, and model interpretability for business insights and automated decision making.</p>
+
+        <div class="cta">
+          <a class="btn" href="#projects">View Projects</a>
+          <a class="btn" href="assets/resume.pdf" target="_blank">Download Resume</a>
+        </div>
+
+        <div class="socials" aria-hidden>
+          <a href="https://github.com/REPLACE_ME" target="_blank" class="btn"><i class="fab fa-github"></i>&nbsp;GitHub</a>
+          <a href="https://www.linkedin.com/in/REPLACE_ME" target="_blank" class="btn"><i class="fab fa-linkedin"></i>&nbsp;LinkedIn</a>
+        </div>
+
+        <div class="stat-grid">
+          <div class="stat"><div style="font-size:18px;font-weight:700">4+</div><div style="font-size:12px;color:var(--muted)">Years Experience</div></div>
+          <div class="stat"><div style="font-size:18px;font-weight:700">12</div><div style="font-size:12px;color:var(--muted)">Projects</div></div>
+          <div class="stat"><div style="font-size:18px;font-weight:700">3</div><div style="font-size:12px;color:var(--muted)">Publications</div></div>
+        </div>
+      </div>
+
+      <aside class="profile-card">
+        <img src="assets/profile.jpg" alt="Profile photo (replace assets/profile.jpg)" onerror="this.style.display='none'" />
+        <div style="margin-top:12px">
+          <h3 style="margin:0">Quick Bio</h3>
+          <p style="color:var(--muted);margin-top:6px;font-size:14px">Machine Learning engineer experienced in forecasting, classification and deploying models to production. Passionate about reproducible research and clean code.</p>
+        </div>
+      </aside>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <h2>Selected Projects</h2>
+      <div class="projects-grid" style="margin-top:14px">
+
+        <!-- Project 1 -->
+        <article class="card">
+          <div style="height:140px;border-radius:10px;background:linear-gradient(135deg,#09203f,#537895);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.9);font-weight:700">Project Image</div>
+          <h4>Forecasting Platform</h4>
+          <p style="color:var(--muted)">End-to-end time series forecasting pipeline with automated retraining and performance monitoring.</p>
+          <div class="badges">
+            <span class="badge">Python</span>
+            <span class="badge">Prophet</span>
+            <span class="badge">Docker</span>
+          </div>
+          <div style="margin-top:12px;display:flex;gap:8px">
+            <a class="btn" href="#" target="_blank">Live</a>
+            <a class="btn" href="#" target="_blank">Code</a>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="card">
+          <div style="height:140px;border-radius:10px;background:linear-gradient(135deg,#2b0f33,#632b62);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.9);font-weight:700">Project Image</div>
+          <h4>NLP Sentiment System</h4>
+          <p style="color:var(--muted)">Sentiment classifier for social data, combined with topic modelling for trend detection and dashboard reporting.</p>
+          <div class="badges">
+            <span class="badge">NLP</span>
+            <span class="badge">scikit-learn</span>
+            <span class="badge">Streamlit</span>
+          </div>
+          <div style="margin-top:12px;display:flex;gap:8px">
+            <a class="btn" href="#" target="_blank">Live</a>
+            <a class="btn" href="#" target="_blank">Code</a>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="card">
+          <div style="height:140px;border-radius:10px;background:linear-gradient(135deg,#003d33,#006b5b);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.9);font-weight:700">Project Image</div>
+          <h4>Visualization Cookbook</h4>
+          <p style="color:var(--muted)">Reusable, publication-quality visualizations for exploratory analysis and stakeholder reports.</p>
+          <div class="badges">
+            <span class="badge">D3</span>
+            <span class="badge">Matplotlib</span>
+            <span class="badge">Tableau</span>
+          </div>
+          <div style="margin-top:12px;display:flex;gap:8px">
+            <a class="btn" href="#" target="_blank">Live</a>
+            <a class="btn" href="#" target="_blank">Code</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <h2>Skills & Tools</h2>
+      <div style="margin-top:10px" class="skills">
+        <span class="skill-pill">Python</span>
+        <span class="skill-pill">Pandas</span>
+        <span class="skill-pill">scikit-learn</span>
+        <span class="skill-pill">PyTorch</span>
+        <span class="skill-pill">TensorFlow</span>
+        <span class="skill-pill">SQL</span>
+        <span class="skill-pill">Docker</span>
+        <span class="skill-pill">Kubernetes</span>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="timeline" style="margin-top:12px">
+        <div class="timeline-item card">
+          <div style="width:6px;margin-right:12px;background:var(--accent);border-radius:6px"></div>
+          <div>
+            <div style="font-weight:700">Data Scientist — Company XYZ</div>
+            <div style="color:var(--muted);font-size:13px">Jan 2022 — Present</div>
+            <div style="color:var(--muted);margin-top:8px">Built forecasting models used by the operations team to reduce stockouts by 18%.</div>
+          </div>
+        </div>
+
+        <div class="timeline-item card">
+          <div style="width:6px;margin-right:12px;background:var(--accent);border-radius:6px"></div>
+          <div>
+            <div style="font-weight:700">Research Assistant — University ABC</div>
+            <div style="color:var(--muted);font-size:13px">Sep 2019 — Dec 2021</div>
+            <div style="color:var(--muted);margin-top:8px">Published 3 papers on time-series forecasting and model interpretability.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="contact-grid" style="margin-top:12px">
+        <div class="card">
+          <h4>Say hello</h4>
+          <p style="color:var(--muted)">For collaborations or hiring, reach me at:</p>
+          <p style="font-weight:700;margin:8px 0"> <a href="mailto:REPLACE_ME@example.com">REPLACE_ME@example.com</a></p>
+          <p style="color:var(--muted)">Or connect on <a href="https://www.linkedin.com/in/REPLACE_ME" target="_blank">LinkedIn</a> or view my <a href="https://github.com/REPLACE_ME" target="_blank">GitHub</a>.</p>
+        </div>
+
+        <div class="card">
+          <h4>Download</h4>
+          <p style="color:var(--muted)">Resume and supporting artifacts</p>
+          <a class="btn" href="assets/resume.pdf" target="_blank">Download Resume (PDF)</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Muhaimin Azam • Built with HTML & CSS • Hosted on GitHub Pages
+    </footer>
+  </main>
+
+  <script>
+    // small helpers
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Replace with small JS features if needed
+    // Smooth scroll for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        e.preventDefault();
+        const t=document.querySelector(a.getAttribute('href'));
+        if(t) t.scrollIntoView({behavior:'smooth',block:'start'});
+      })
+    });
+  </script>
+</body>
+</html>
