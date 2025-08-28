@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Muhaimin Azam — Data Scientist</title>
+  <title>Portfolio - Muhaimin Azam</title>
   <meta name="description" content="Portfolio of Muhaimin Azam — Data Scientist. Machine Learning, Time Series, NLP, Data Viz." />
 
   <!-- Google Font -->
@@ -17,7 +17,7 @@
       --bg:#0f1724; /* deep navy */
       --card:#0b1220;
       --muted:#9aa4b2;
-      --accent:#6ee7b7; /* mint */
+      --accent:#82c6e9; /* mint */
       --glass: rgba(255,255,255,0.04);
       --glass-2: rgba(255,255,255,0.02);
       --radius: 14px;
@@ -27,7 +27,7 @@
     *{box-sizing:border-box}
     html,body{height:100%;margin:0;background:linear-gradient(180deg,#071029 0%, #071a2a 60%);color:#e6eef6}
     a{color:var(--accent);text-decoration:none}
-    header{display:flex;align-items:center;justify-content:space-between;padding:22px 28px;backdrop-filter: blur(6px);}
+    header{display:flex;align-items:center;justify-content:space-between;padding:10px 16px;backdrop-filter: blur(6px);}
     .container{max-width:1100px;margin:0 auto;padding:28px}
 
     /* Header nav */
@@ -37,7 +37,7 @@
     .btn{background:linear-gradient(90deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));padding:9px 14px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);font-weight:600}
 
     /* Hero */
-    .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:center;padding:40px 0}
+    .hero{display:grid;grid-template-columns:1fr 280px;gap:16px;align-items:center;padding:18px 0}
     .intro h1{margin:0;font-size:38px;letter-spacing:-0.4px}
     .intro p{color:var(--muted);line-height:1.6}
     .cta{display:flex;gap:12px;margin-top:18px}
@@ -80,16 +80,68 @@
     /* subtle hover */
     .card:hover{transform:translateY(-6px);transition:0.25s ease}
 
+
   </style>
+  <style>
+    .carousel {
+    width: 200px;   /* adjust size */
+    height: 200px;  /* makes it square */
+    overflow: hidden;
+    margin: auto;
+    position: relative;
+    border: 2px solid #ccc; /* optional border */
+    border-radius: 12px;    /* keep a little rounded corner (optional), set to 0 for perfect square */
+  }
+
+  .carousel-images {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s ease-in-out;
+  }
+
+  .carousel-images img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  /* Buttons */
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 18px;
+  }
+
+  .carousel-btn.prev {
+    left: 5px;
+  }
+
+  .carousel-btn.next {
+    right: 5px;
+  }
+
+  .carousel-btn:hover {
+    background: rgba(0,0,0,0.8);
+  }
+</style>
+
 </head>
 <body>
   <header>
-    <div class="container" style="display:flex;align-items:center;justify-content:space-between;padding:0">
+    <div class="brand" style="display:flex;align-items:center;justify-content:center;gap: 330px;">
       <div class="brand">
         <div style="width:46px;height:46px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#8ad7ff);display:flex;align-items:center;justify-content:center;font-weight:800;color:#04202d">MA</div>
         <div>
           <div style="font-weight:700">Muhaimin Azam</div>
-          <div style="font-size:12px;color:var(--muted)">Data Scientist</div>
+          
         </div>
       </div>
 
@@ -105,8 +157,8 @@
   <main class="container">
     <section class="hero">
       <div class="intro">
-        <h1>Hi — I'm <span style="color:var(--accent)">Muhaimin</span></h1>
-        <p> I'm an aspiring data scientist with a strong foundation in data analytics, data mining, data management, software
+        <h1>Hi! I'm <span style="color:var(--accent)">Muhaimin</span></h1>
+        <p> An aspiring data scientist with a strong foundation in data analytics, data mining, data management, software
             engineering, and database management. Proficient in data visualization tools such as Tableau and Power
             BI, and experienced in Python, SPSS, and SQL for data manipulation and analysis. Skilled at applying machine
             learning algorithms and statistical models to uncover underlying patterns to support data-driven decision
@@ -123,21 +175,43 @@
         <div class="socials" aria-hidden>
           
         </div>
-
+        <!--
         <div class="stat-grid">
           <div class="stat"><div style="font-size:18px;font-weight:700">4+</div><div style="font-size:12px;color:var(--muted)">Years Experience</div></div>
           <div class="stat"><div style="font-size:18px;font-weight:700">12</div><div style="font-size:12px;color:var(--muted)">Projects</div></div>
           <div class="stat"><div style="font-size:18px;font-weight:700">3</div><div style="font-size:12px;color:var(--muted)">Publications</div></div>
         </div>
+        -->
       </div>
 
+      <!--
       <aside class="profile-card">
         <img src="assets/profile.jpg" alt="Profile photo (replace assets/img/profile.jpg)" onerror="this.style.display='none'" />
         <div style="margin-top:12px">
           <h3 style="margin:0">Quick Bio</h3>
           <p style="color:var(--muted);margin-top:6px;font-size:14px">Machine Learning engineer experienced in forecasting, classification and deploying models to production. Passionate about reproducible research and clean code.</p>
         </div>
-      </aside>
+      </aside> 
+    -->    
+
+    <aside class="profile-card">
+      <div class="carousel">
+        <div class="carousel-images">
+          <img src="assets/img/fypphoto.jpg" alt="Profile photo 1" />
+          <img src="assets/img/fypphoto.jpg" alt="Profile photo 2" />
+          <img src="assets/img/fypphoto.jpg" alt="Profile photo 3" />
+        </div>
+
+        <!-- Buttons -->
+        <button class="carousel-btn prev">&#10094;</button>
+        <button class="carousel-btn next">&#10095;</button>
+      </div>
+
+      <div style="margin-top:12px">
+      
+      </div>
+    </aside>
+
     </section>
 
     <!-- Projects -->
@@ -147,52 +221,69 @@
 
         <!-- Project 1 -->
         <article class="card">
-          <div style="height:140px;border-radius:10px;background:linear-gradient(135deg,#09203f,#537895);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.9);font-weight:700">Project Image</div>
-          <h4>Forecasting Platform</h4>
-          <p style="color:var(--muted)">End-to-end time series forecasting pipeline with automated retraining and performance monitoring.</p>
+          <div style="height:140px;border-radius:10px;overflow:hidden;">
+            <img src="assets/img/forecasting.png" alt="Forecasting Natural Gas Consumption" style="width:100%;height:100%;object-fit:cover;">
+          </div>
+          <h4>Forecasting Natural Gas Consumption</h4>
+          <p style="color:var(--muted)">Conducted an analysis of natural gas consumption trends in European markets. Developed ML models to forecast and evaluate along with existing econometrics models.</p>
           <div class="badges">
             <span class="badge">Python</span>
-            <span class="badge">Prophet</span>
-            <span class="badge">Docker</span>
+            <span class="badge">Statistical Analysis</span>
+            <span class="badge">Excel</span>
+            <span class="badge">Git and GitHub</span>
           </div>
           <div style="margin-top:12px;display:flex;gap:8px">
-            <a class="btn" href="#" target="_blank">Live</a>
-            <a class="btn" href="#" target="_blank">Code</a>
+            <a class="btn" href="https://github.com/miynne24/forecasting-gas_industrial_consumption.git" target="_blank">Code</a>
           </div>
         </article>
 
         <!-- Project 2 -->
         <article class="card">
-          <div style="height:140px;border-radius:10px;background:linear-gradient(135deg,#2b0f33,#632b62);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.9);font-weight:700">Project Image</div>
-          <h4>NLP Sentiment System</h4>
-          <p style="color:var(--muted)">Sentiment classifier for social data, combined with topic modelling for trend detection and dashboard reporting.</p>
+          <div style="height:140px;border-radius:10px;overflow:hidden;">
+            <img src="assets/img/xsentimentdashboard.png" alt="Forecasting Natural Gas Consumption" style="width:100%;height:100%;object-fit:cover;">
+          </div>
+          <h4>X Sentiment Analysis on Top Sportswear Brands</h4>
+          <p style="color:var(--muted)">Sentiment classifier using Naive Bayes to classify X textual data, combined with topic modelling for theme detection and dashboard reporting.</p>
           <div class="badges">
+            <span class="badge">Python</span>
             <span class="badge">NLP</span>
-            <span class="badge">scikit-learn</span>
-            <span class="badge">Streamlit</span>
+            <span class="badge">PyCharm</span>
+            <span class="badge">Flask</span>
+            <span class="badge">JavaScript</span>
           </div>
           <div style="margin-top:12px;display:flex;gap:8px">
-            <a class="btn" href="#" target="_blank">Live</a>
-            <a class="btn" href="#" target="_blank">Code</a>
+            <a class="btn" href="https://github.com/miynne24/X-Sentiment-Analysis-on-Top-Sportswear-Brands-Classification-and-Visualization.git" target="_blank">Code</a>
           </div>
         </article>
 
         <!-- Project 3 -->
         <article class="card">
-          <div style="height:140px;border-radius:10px;background:linear-gradient(135deg,#003d33,#006b5b);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.9);font-weight:700">Project Image</div>
-          <h4>Visualization Cookbook</h4>
-          <p style="color:var(--muted)">Reusable, publication-quality visualizations for exploratory analysis and stakeholder reports.</p>
+          <div style="height:140px;border-radius:10px;overflow:hidden;">
+            <img src="assets/img/bookdepository.png" alt="Forecasting Natural Gas Consumption" style="width:100%;height:100%;object-fit:cover;">
+          </div>
+          <h4>Book Depository E-Commerce System</h4>
+          <p style="color:var(--muted)">A web-based platform that enables students to buy and sell their preloved textbooks conveniently.
+             It provides features for listing, browsing, and managing textbook transactions.</p>
           <div class="badges">
-            <span class="badge">D3</span>
-            <span class="badge">Matplotlib</span>
-            <span class="badge">Tableau</span>
+            <span class="badge">Java</span>
+            <span class="badge">JavaScript</span>
+            <span class="badge">HTML</span>
+            <span class="badge">Java MVC</span>
+            <span class="badge">CSS</span>
+            <span class="badge">MySQL</span>
           </div>
           <div style="margin-top:12px;display:flex;gap:8px">
-            <a class="btn" href="#" target="_blank">Live</a>
             <a class="btn" href="#" target="_blank">Code</a>
           </div>
         </article>
 
+      </div>
+
+       <!-- View More Button -->
+      <div style="text-align:center; margin-top:20px;">
+        <a class="btn" href="https://github.com/miynne24" target="_blank" style="padding:10px 20px; font-weight:600;">
+          View More
+        </a>
       </div>
     </section>
 
@@ -202,16 +293,25 @@
       <div style="margin-top:10px" class="skills">
         <span class="skill-pill">Python</span>
         <span class="skill-pill">Pandas</span>
-        <span class="skill-pill">scikit-learn</span>
+        <span class="skill-pill">Scikit-learn</span>
         <span class="skill-pill">PyTorch</span>
-        <span class="skill-pill">TensorFlow</span>
+        <span class="skill-pill">Flask</span>
+        <span class="skill-pill">REST API</span>
         <span class="skill-pill">SQL</span>
-        <span class="skill-pill">Docker</span>
-        <span class="skill-pill">Kubernetes</span>
+        <span class="skill-pill">Java</span>
+        <span class="skill-pill">JavaScript</span>
+        <span class="skill-pill">C++</span>
+        <span class="skill-pill">HTML</span>
+        <span class="skill-pill">Power BI</span>
+        <span class="skill-pill">Tableau</span>
+        <span class="skill-pill">Power Automate</span>
+        <span class="skill-pill">Power Apps</span>
+        <span class="skill-pill">Weka</span>
+        <span class="skill-pill">SPSS</span>
       </div>
     </section>
 
-    <!-- Experience -->
+    <!-- Experience
     <section id="experience">
       <h2>Experience</h2>
       <div class="timeline" style="margin-top:12px">
@@ -234,6 +334,7 @@
         </div>
       </div>
     </section>
+     -->
 
     <!-- Contact -->
     <section id="contact">
@@ -241,8 +342,12 @@
       <div class="contact-grid" style="margin-top:12px">
         <div class="card">
           <h4>Say hello</h4>
-          <p style="color:var(--muted)">For collaborations or hiring, reach me at:</p>
+          <p style="color:var(--muted)">For hiring, reach me at:</p>
           <p style="font-weight:700;margin:8px 0"> <a href="mailto: abdmuhaimin2405@gmail.com">abdmuhaimin2405@gmail.com</a></p>
+          <p style="font-weight:700;margin:8px 0; cursor:pointer; color:rgb(255, 255, 255);" onclick="copyNumber()">
+            +60-1116044425 (click to copy)
+          </p>
+
           <p style="color:var(--muted)">Or connect on <a href="https://www.linkedin.com/in/muhaiminazam/" target="_blank">LinkedIn</a> or view my <a href="https://github.com/miynne24" target="_blank">GitHub</a>.</p>
         </div>
 
@@ -272,6 +377,49 @@
         if(t) t.scrollIntoView({behavior:'smooth',block:'start'});
       })
     });
+  </script>
+
+  <script>
+
+    let index = 0;
+    const images = document.querySelector(".carousel-images");
+    const total = images.children.length;
+    const imgWidth = 200; // must match CSS width
+
+    function showImage(i) {
+      index = (i + total) % total; 
+      images.style.transform = `translateX(-${index * imgWidth}px)`;
+    }
+
+    // Auto swipe
+    let autoSlide = setInterval(() => showImage(index + 1), 3000);
+
+    // Manual buttons
+    document.querySelector(".next").addEventListener("click", () => {
+      showImage(index + 1);
+      resetAutoSlide();
+    });
+
+    document.querySelector(".prev").addEventListener("click", () => {
+      showImage(index - 1);
+      resetAutoSlide();
+    });
+
+    // Reset auto slide when user clicks
+    function resetAutoSlide() {
+      clearInterval(autoSlide);
+      autoSlide = setInterval(() => showImage(index + 1), 3000);
+    }
+
+  </script>
+
+  <script>
+  function copyNumber() {
+    const number = "+60-1116044425";
+    navigator.clipboard.writeText(number).then(() => {
+      alert("Phone number copied: " + number);
+    });
+  }
   </script>
 </body>
 </html>
