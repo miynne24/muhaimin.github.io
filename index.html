@@ -219,7 +219,7 @@
       <h2>Selected Projects</h2>
       <div class="projects-grid" style="margin-top:14px">
 
-        <!-- Project 1 -->
+        <!-- 1st Project -->
         <article class="card">
           <div style="height:140px;border-radius:10px;overflow:hidden;">
             <img src="assets/img/forecasting.png" alt="Forecasting Natural Gas Consumption" style="width:100%;height:100%;object-fit:cover;">
@@ -237,7 +237,7 @@
           </div>
         </article>
 
-        <!-- Project 2 -->
+        <!-- 2nd Project -->
         <article class="card">
           <div style="height:140px;border-radius:10px;overflow:hidden;">
             <img src="assets/img/xsentimentdashboard.png" alt="Forecasting Natural Gas Consumption" style="width:100%;height:100%;object-fit:cover;">
@@ -256,7 +256,7 @@
           </div>
         </article>
 
-        <!-- Project 3 -->
+        <!-- 3rd Project -->
         <article class="card">
           <div style="height:140px;border-radius:10px;overflow:hidden;">
             <img src="assets/img/bookdepository.png" alt="Forecasting Natural Gas Consumption" style="width:100%;height:100%;object-fit:cover;">
@@ -365,11 +365,11 @@
   </main>
 
   <script>
-    // small helpers
+    //code to add small helpers
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Replace with small JS features if needed
-    // Smooth scroll for internal links
+    //code to replace with small JS features if needed
+    //code to make smooth scroll for internal links
     document.querySelectorAll('a[href^="#"]').forEach(a=>{
       a.addEventListener('click', e=>{
         e.preventDefault();
@@ -391,10 +391,10 @@
       images.style.transform = `translateX(-${index * imgWidth}px)`;
     }
 
-    // Auto swipe
+    //code to set auto swipe
     let autoSlide = setInterval(() => showImage(index + 1), 3000);
 
-    // Manual buttons
+    //code to add manual buttons
     document.querySelector(".next").addEventListener("click", () => {
       showImage(index + 1);
       resetAutoSlide();
@@ -405,7 +405,7 @@
       resetAutoSlide();
     });
 
-    // Reset auto slide when user clicks
+    //function to reset auto slide when user clicks
     function resetAutoSlide() {
       clearInterval(autoSlide);
       autoSlide = setInterval(() => showImage(index + 1), 3000);
